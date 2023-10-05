@@ -5,7 +5,7 @@
     </head>
   <body>
     <nav class="navbar">
-        <h1 class="logo">Sofija Dimitrijevic Hack4Impact</h1>
+        <h1 class="logo"><a href="index.html">Sofija Dimitrijevic Hack4Impact</h1>
         <ul class="nav-list">
             <li><a href="index.html">Home</a></li>
             <li><a href="blog.html">Blog</a></li>
@@ -16,6 +16,21 @@
     </nav>
     <main>
         <h1 class="page-title">Contact</h1>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required/>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required/>
+            <label for="message">Message:</label>
+            <textarea
+                id="message"
+                name="message"
+                required
+            ></textarea>
+            </textarea>
+            <input type="submit">
+        </form>
+       
     </main>
     <footer class="footer">
         © 2023 Sofija's Personal Website | All Rights Reserved
