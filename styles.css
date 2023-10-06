@@ -56,12 +56,12 @@
   }
   
   .navbar a:hover {
-    color: var(--purple);
+    color: var(--lavender);
     text-decoration: underline;
   }
   
   .navbar a:active {
-    color: var(--purple);
+    color: var(--lavender);
   }
   
   /* Styles for the main content */
