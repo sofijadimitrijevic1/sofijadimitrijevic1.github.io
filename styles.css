@@ -1,60 +1,80 @@
-/* Reset some default browser styles */
-body, h1, h2, h3, p, ul, li {
-    margin: 0;
-    padding: 0;
+:root {
+    /* Color variables */
+    --lavender: #EAE7F2;
+    --darker-purple: #5B4E77;
+    --purple: #725C8E;
+    --black: #333;
+    --white: #fff;
   }
   
-  /* Set the background color and text color for the entire page */
   body {
-    background-color: #EAE7F2; /* Lavender background */
-    color: #333;
+    background-color: var(--lavender);
+    color: var(--black);
     font-family: Arial, sans-serif;
     line-height: 1.6;
   }
   
-  /* Style the header/navbar */
+  /* Styles for the navbar/header */
   .navbar {
-    background-color: #5B4E77; /* Darker purple */
-    color: #fff;
-    padding: 10px 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 7%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
-  }
-  
-  .logo a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 24px;
-  }
-  
-  .nav-list {
-    list-style: none;
+    background-color: var(--darker-purple);
+    color: var(--white);
     padding: 0;
   }
   
-  .nav-list li {
-    display: inline;
-    margin-right: 20px;
-  }
-  
-  .nav-list li:last-child {
-    margin-right: 0;
-  }
-  
-  .nav-list a {
-    color: #fff;
+  .logo a {
+    color: var(--white);
     text-decoration: none;
+    font-size: 24px;
+    font-family: Georgia;
   }
   
-  /* Style the main content */
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    right: 30px;
+    list-style: none;
+  }
+  
+  .navbar a {
+    color: var(--white);
+    font-weight: bold;
+    margin: 0 12px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-family: monospace;
+  }
+  
+  .navbar a:hover {
+    color: var(--purple);
+    text-decoration: underline;
+  }
+  
+  .navbar a:active {
+    color: var(--purple);
+  }
+  
+  /* Styles for the main content */
   .page-title {
     text-align: center;
     margin-top: 20px;
-    font-size: 36px;
-    color: #5B4E77; /* Darker purple */
+    font-size: 40px;
+    font-family: Georgia;
+    color: var(--darker-purple);
   }
   
   .resume {
-    background-color: #fff;
+    background-color: var(--white);
     padding: 20px;
     margin: 20px;
     border-radius: 5px;
@@ -64,7 +84,7 @@ body, h1, h2, h3, p, ul, li {
   .section-title {
     font-size: 24px;
     margin-top: 20px;
-    color: #5B4E77; /* Darker purple */
+    color: var(--darker-purple);
     text-align: center;
   }
   
@@ -81,25 +101,10 @@ body, h1, h2, h3, p, ul, li {
     margin-top: 10px;
   }
   
-  /* Style the footer */
+  /* Styles for the footer */
   .footer {
-    background-color: #5B4E77; /* Darker purple */
-    color: #fff;
+    background-color: var(--darker-purple);
+    color: var(--white);
     text-align: center;
     padding: 10px 0;
-  }
-  
-  /* Style the download link */
-  a[href$=".pdf"] {
-    display: inline-block;
-    background-color: #5B4E77; /* Darker purple */
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-  }
-  
-  a[href$=".pdf"]:hover {
-    background-color: #725C8E; /* Darker shade of purple on hover */
   }
