@@ -80,6 +80,15 @@
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   }
+
+  /* Styles for each section (bubbles) */
+  .section {
+    background-color: var(--lavender); /* Set a lavender background for each section */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 20px; /* Rounded corners for each section */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
   
   .section-title {
     font-size: 24px;
