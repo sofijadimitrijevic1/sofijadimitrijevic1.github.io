@@ -22,8 +22,12 @@
   <main class="section">
     <div class="container">
       <h1 class="section-title">Contact</h1>
-      <form class="contact-grid" name="contact" method="POST" data-netlify="true">
+      <!-- Netlify Forms enabled + honeypot + redirect to /thanks -->
+      <form class="contact-grid" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
         <input type="hidden" name="form-name" value="contact" />
+        <p class="hidden" style="display:none;">
+          <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+        </p>
         <label>
           <span>Name</span>
           <input name="name" required />
@@ -36,6 +40,8 @@
           <span>Message</span>
           <textarea name="message" rows="6" required></textarea>
         </label>
+        <!-- Optional reCAPTCHA: enable in Netlify, then uncomment div below -->
+        <!-- <div data-netlify-recaptcha="true" class="full"></div> -->
         <button class="btn btn-solid" type="submit">Send</button>
       </form>
     </div>
