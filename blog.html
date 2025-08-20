@@ -1,25 +1,41 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Blog</title>
-        <link rel="stylesheet" href="styles.css" />
-    </head>
-  <body>
-    <nav class="navbar">
-        <h1 class="logo"><a href="index.html">Sofija's Personal Website</h1>
-        <ul class="nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-    </nav>
-    <main>
-        <h1 class="page-title">Blog</h1>
-    </main>
-    <footer class="footer">
-        © 2023 Sofija's Personal Website | All Rights Reserved
-    </footer>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog — Sofija Dimitrijevic</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">Sofija Dimitrijevic</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="section">
+    <div class="container">
+      <h1 class="section-title">Blog</h1>
+      <div class="cards-grid">
+        <a class="card" href="#">
+          <h3>Adding flocking to AFV models</h3>
+          <p>Notes from porting MATLAB → Python and measuring persistence / confluency.</p>
+          <span class="tags">Research · AFV · Voronoi</span>
+        </a>
+        <a class="card" href="#">
+          <h3>From idea → desktop app</h3>
+          <p>Shipping a Windows telemetry service and C#/XAML UI for power prediction.</p>
+          <span class="tags">C# · ML · Systems</span>
+        </a>
+      </div>
+    </div>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><span>© <script>document.write(new Date().getFullYear())</script> Sofija Dimitrijevic</span><span>Blog</span></div></footer>
+</body>
 </html>

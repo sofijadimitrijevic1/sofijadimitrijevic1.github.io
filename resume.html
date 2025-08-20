@@ -1,120 +1,37 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Resume</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <nav class="navbar">
-        <h1 class="logo"><a href="index.html">Sofija's Personal Website</h1>
-        <ul class="nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-    </nav>
-    <main>
-        <h1 class="page-title">Resume</h1>
-        <a href="ResumeSofijaDimitrijevic.pdf" download >Download Resume</a>
-        <div class="resume">
-            <section class="section">
-                <h1 class="section-title">Education</h2>
-                <div class="entry">
-                    <h3 class="entry-title">California State Polytechnic University, San Luis Obispo</h3>
-                    <p class="entry-info">September 2022 - Present</p>
-                    <p class="entry-description">B.S. Computer Science, College of Engineering, GPA: 3.73</p>
-                    <p class="entry-description"><strong>Awards and Honors:</strong> President's List 2022-2023</p>
-                </div>
-            </section>
-            <section class="section">
-                <h1 class="section-title">Coursework</h1>
-                <ul class="course-list">
-                    <li>Data Structures</li>
-                    <li>Object-Oriented Programming in Java</li>
-                    <li>Introduction to Computer Organization</li>
-                    <li>Linear Algebra</li>
-                    <li>Discrete Structures</li>
-                    <li>Systems Programming</li>
-                </ul>
-            </section>
-            <section class="section">
-                <h1 class="section-title">Skills</h1>
-                <ul class="skill-list">
-                    <li>Python Programming</li>
-                    <li>Java Programming</li>
-                    <li>C Programming</li>
-                    <li>HTML and CSS</li>
-                    <li>VSCode</li>
-                    <li>IntelliJ</li>
-                    <li>PyCharm</li>
-                    <li>Valgrind</li>
-                    <li>Pandas</li>
-                    <li>GIT and Github</li>
-                    <li>Figma</li>
-                </ul>
-            </section>
-            <section class="section">
-                <h1 class="section-title">Projects</h1>
-                <div class="entry">
-                    <h3 class="entry-title">Hack4Impact Starter Pack - Fall 2023</h3>
-                        <p class="entry-description">Created a personal website following Cal Poly's Hack4Impact starter pack directions.</p>
-                </div>
-                <div class="entry">
-                    <h3 class="entry-title">Automating Spotify Discover Weekly Playlist - Summer 2023</h3>
-                        <p class="entry-description">Followed <em>Sysnation</em> YouTube tutorial on integrating Spotify Oauth into a Python project and automate saving a user’s Discover Weekly playlist using the Spotify API. Also created HTML and CSS files for a login page.</p>
-                </div>
-                <div class="entry">
-                <h3 class="entry-title">Object-Oriented Programming in Java Class - Winter 2023</h3>
-                    <p class="entry-description"><strong>Forest Simulator:</strong> Refactored a Java forest simulator, adhering to Object-Oriented design principles. Eliminated duplication and enhanced maintainability. Integrated additional interactive features and incorporated A* pathfinding algorithm, going beyond the basic requirements of the project.</p>
-                </div>
-                <div class="entry">
-                <h3 class="entry-title">Data Structures Class - Fall 2022</h3>
-                    <p class="entry-description"><strong>Huffman Encoding:</strong> Created a lossless file compressor that serializes and deserializes files using a Huffman tree based on character frequency. Implemented in Python.</p>
-                </div>
-            </section>
-            <section class="section">
-                <h1 class="section-title">Experience</h1>
-                <div class="entry">
-                    <h3 class="entry-title">SmartNews - Palo Alto, CA</h3>
-                    <p class="entry-info">June 2020 - August 2020</p>
-                    <p class="entry-info"><strong>Software Engineer Intern</strong></p>
-                    <ul>
-                        <li>Collected training data and researched/presented various applications
-                            of the BERT deep learning model to develop a pipeline AI news summarization project. </li>
-                        <li>Worked under mentorship of Edward Y. Chang (Adjunct Professor, Stanford CS Department)</li>
-                    </ul>
-                </div>
-            </section>
-            <section class="section">
-                <h1 class="section-title">Activities</h1>
-                <div class="entry">
-                    <h3 class="entry-title">Women Involved in Software and Hardware</h3>
-                    <p class="entry-info"><strong>Member</strong> - September 2022 - Present</p>
-                    <p class="entry-info"><strong>Tech Officer</strong> - September 2023 - Present</p>
-                    <ul class="responsibilities-list">
-                        <li>Planning technical events throughout the year, such as workshops, group projects, hackathons, 3D printer events</li>
-                        <li>Helping come up with technical and resume-building events that would benefit our membersg</li>
-                        <li>Advertising different hackathons and other hands-on tech workshops and events</li>
-                    </ul>
-                </div>
-                <div class="entry">
-                    <h3 class="entry-title">AI For Search And Rescue Student Researcher</h3>
-                    <p class="entry-info">September 2023 - Present</p>
-                    <p class="entry-description">Working on the machine learning team under Professor Franz Kurfess at Cal Poly to help develop
-                         machine learning models and related computational methods in support of Search and Rescue missions.</p>
-                </div>
-                <div class="entry">
-                    <h3 class="entry-title">Computer Science Artificial Intelligence Club Member</h3>
-                    <p class="entry-info">September 2022 - Present</p>
-                    <p class="entry-description">Attending meetings to learn more about AI tools and how to use them as a software developer.</p>
-                </div>
-            </section>
-        </div>
-    </main>
-    <footer class="footer">
-        © 2023 Sofija's Personal Website | All Rights Reserved
-    </footer>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume — Sofija Dimitrijevic</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">Sofija Dimitrijevic</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="section">
+    <div class="container">
+      <h1 class="section-title">Resume</h1>
+      <p><a class="btn btn-solid" href="ResumeSofijaDimitrijevic.pdf" download>Download PDF</a></p>
+      <div class="pdf-frame">
+        <iframe title="Resume PDF" src="ResumeSofijaDimitrijevic.pdf#view=FitH" loading="lazy"></iframe>
+      </div>
+    </div>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><span>© <script>document.write(new Date().getFullYear())</script> Sofija Dimitrijevic</span><span>Resume</span></div></footer>
+  <style>
+    .pdf-frame { margin-top:16px; background:#fff; border:1px solid rgba(0,0,0,.08); border-radius:12px; box-shadow: var(--shadow); overflow:hidden; }
+    .pdf-frame iframe { width:100%; height: 80vh; border:0; }
+  </style>
+</body>
 </html>
