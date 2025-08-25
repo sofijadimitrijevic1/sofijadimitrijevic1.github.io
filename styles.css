@@ -47,13 +47,12 @@ body {
 .btn-solid { background: var(--accent); color: #fff; border: 1px solid var(--accent); }
 .quick-facts {
   margin: 16px 0 0;
-  padding: 0;
-  list-style: none;
+  padding-left: 20px;  
+  list-style: disc;     
   display: grid;
   gap: 6px;
-  color: var(--text);     
-  font-size: 16px; 
-  font-weight:250 ;       
+  color: var(--text);
+  font-size: 16px;
 }
 
 /* Cards */
