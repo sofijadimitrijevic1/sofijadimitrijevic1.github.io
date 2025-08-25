@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — Sofija Dimitrijevic</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">Sofija Dimitrijevic</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 class="section-title" style="text-align:center;">Projects</h1>
+      <p class="proj-intro">These projects helped me explore ML systems, full‑stack development, and integrations. Use the filters to view by category.</p>
+
+      <div class="filter-row" id="filters">
+        <button class="filter-chip active" data-filter="all">All</button>
+        <button class="filter-chip" data-filter="fullstack">Full‑Stack Development</button>
+        <button class="filter-chip" data-filter="apis">APIs & Integrations</button>
+        <button class="filter-chip" data-filter="aiml">AI/ML</button>
+        <button class="filter-chip" data-filter="other">Other</button>
+      </div>
+
+      <div class="projects-grid" id="projects">
+        <!-- Gather -->
+        <article class="project-card" data-cat="fullstack">
+          <div class="thumb" aria-hidden></div>
+          <div class="project-body">
+            <h3 class="project-title">Gather — Digital Inventory</h3>
+            <p class="project-desc">Full‑stack inventory manager; refactored backend into a reusable utility library reducing duplication by ~20%.</p>
+            <div class="tag-row">
+              <span class="tag">TypeScript</span>
+              <span class="tag">React</span>
+              <span class="tag">Node</span>
+              <span class="tag">Express</span>
+              <span class="tag">REST API</span>
+              <span class="tag">MongoDB</span>
+            </div>
+          </div>
+          <a class="btn" style="margin:0 18px 18px;" href="https://github.com/sofijadimitrijevic1/Gather" target="_blank" rel="noreferrer">View repo</a>
+        </article>
+
+        <!-- Moment -->
+        <article class="project-card" data-cat="aiml">
+          <div class="thumb" aria-hidden></div>
+          <div class="project-body">
+            <h3 class="project-title">Moment — Burnout Scoring</h3>
+            <p class="project-desc">AI‑powered app predicting hospital staff burnout; Won Best Design at a 24‑hour university‑wide hackathon.</p>
+            <div class="tag-row">
+              <span class="tag">TensorFlow</span>
+              <span class="tag">scikit‑learn</span>
+              <span class="tag">Python</span>
+              <span class="tag">Data Viz</span>
+            </div>
+          </div>
+          <a class="btn" style="margin:0 18px 18px;" href="https://github.com/sofijadimitrijevic1/Moment" target="_blank" rel="noreferrer">View repo</a>
+        </article>
+
+        <!-- MCP Server–Client -->
+        <article class="project-card" data-cat="apis aiml">
+          <div class="thumb" aria-hidden></div>
+          <div class="project-body">
+            <h3 class="project-title">MCP Server–Client</h3>
+            <p class="project-desc">Asynchronous MCP server + client supporting custom tools, prompts, and document resources; concurrent calls increased throughput ~40%.</p>
+            <div class="tag-row">
+              <span class="tag">Python</span>
+              <span class="tag">MCP</span>
+              <span class="tag">AsyncIO</span>
+              <span class="tag">Pydantic</span>
+            </div>
+          </div>
+          <a class="btn" style="margin:0 18px 18px;" href="https://github.com/sofijadimitrijevic1" target="_blank" rel="noreferrer">View repos</a>
+        </article>
+
+        <!-- Spotify Recs / Analyzer -->
+        <article class="project-card" data-cat="apis">
+          <div class="thumb" aria-hidden></div>
+          <div class="project-body">
+            <h3 class="project-title">Spotify Playlist Analyzer</h3>
+            <p class="project-desc">Analyzed playlists and surfaced recommendations using Spotify Web API.</p>
+            <div class="tag-row">
+              <span class="tag">Spotipy</span>
+              <span class="tag">Python</span>
+              <span class="tag">API</span>
+            </div>
+          </div>
+          <a class="btn" style="margin:0 18px 18px;" href="https://github.com/sofijadimitrijevic1/SpotifyRecs" target="_blank" rel="noreferrer">View repo</a>
+        </article>
+
+        <!-- Airbnb NLP -->
+        <article class="project-card" data-cat="aiml">
+          <div class="thumb" aria-hidden></div>
+          <div class="project-body">
+            <h3 class="project-title">Airbnb Reviews NLP</h3>
+            <p class="project-desc">Explored NLP techniques on Airbnb review text for insights and clustering.</p>
+            <div class="tag-row">
+              <span class="tag">NLTK</span>
+              <span class="tag">scikit‑learn</span>
+              <span class="tag">Python</span>
+            </div>
+          </div>
+          <a class="btn" style="margin:0 18px 18px;" href="https://github.com/sofijadimitrijevic1/airbnb-NLP" target="_blank" rel="noreferrer">View repo</a>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer"><div class="container footer-inner"><span>© <script>document.write(new Date().getFullYear())</script> Sofija Dimitrijevic</span><span>Projects</span></div></footer>
+
+  <script>
+    // Simple filter logic
+    const filters = document.querySelectorAll('.filter-chip');
+    const cards = document.querySelectorAll('.project-card');
+    filters.forEach(btn => btn.addEventListener('click', () => {
+      filters.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      cards.forEach(c => {
+        if (f === 'all') { c.style.display = ''; return; }
+        const cats = c.dataset.cat.split(' ');
+        c.style.display = cats.includes(f) ? '' : 'none';
+      });
+    }));
+  </script>
+</body>
+</html>
