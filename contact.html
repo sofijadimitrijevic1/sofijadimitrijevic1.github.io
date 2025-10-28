@@ -1,42 +1,55 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Contact</title>
-        <link rel="stylesheet" href="styles.css" />
-    </head>
-  <body>
-    <nav class="navbar">
-        <h1 class="logo"><a href="index.html">Sofija's Personal Website</h1>
-        <ul class="nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-    </nav>
-    <main class="contact-form-container">
-        <h1 class="page-title">Contact</h1>
-        <form id="contact-form" class="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required/>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required/>
-            <label for="message">Message:</label>
-            <textarea
-                id="message"
-                name="message"
-                required
-            ></textarea>
-            </textarea>
-            <input type="submit" value="Submit" class="submit-button">
-        </form>
-       <p>
-        
-       </p>
-    </main>
-    <footer class="footer">
-        © 2023 Sofija's Personal Website | All Rights Reserved
-    </footer>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Sofija Dimitrijevic</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">Sofija Dimitrijevic</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="section">
+    <div class="container">
+      <h1 class="section-title">Contact</h1>
+      <!-- Netlify Forms enabled + honeypot + redirect to /thanks -->
+      <form class="contact-grid" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+        <input type="hidden" name="form-name" value="contact" />
+        <p class="hidden" style="display:none;">
+          <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+        </p>
+        <label>
+          <span>Name</span>
+          <input name="name" required />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required />
+        </label>
+        <label class="full">
+          <span>Message</span>
+          <textarea name="message" rows="6" required></textarea>
+        </label>
+        <button class="btn btn-solid" type="submit">Send</button>
+      </form>
+    </div>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><span>© <script>document.write(new Date().getFullYear())</script> Sofija Dimitrijevic</span><span>Contact</span></div></footer>
+  <style>
+    .contact-grid { display:grid; grid-template-columns: 1fr 1fr; gap: 14px; max-width: 720px; }
+    .contact-grid label { display:flex; flex-direction: column; gap:6px; font-weight:600; color: var(--muted); }
+    .contact-grid input, .contact-grid textarea { border:1px solid rgba(0,0,0,.12); border-radius: 12px; padding: 12px 14px; font: inherit; background:#fff; box-shadow:var(--shadow); }
+    .contact-grid .full { grid-column: 1 / -1; }
+    @media (max-width: 720px){ .contact-grid{ grid-template-columns: 1fr; } }
+  </style>
+</body>
 </html>
