@@ -1,0 +1,250 @@
+%-------------------------
+% CV in LaTeX — Sofija Dimitrijevic
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\ifdefined\pdfglyphtounicode\input{glyphtounicode}\fi
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\setlength{\footskip}{5pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\ifdefined\pdfgentounicode\pdfgentounicode=1\fi
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Bullets and helpers
+\renewcommand\labelitemii{$\bullet$}
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small #3} & {\small #4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubSubheading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small #1} & {\small #2} \\
+  \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabularx}{0.97\textwidth}{@{}Xr@{}}
+    \small #1 & #2 \\
+  \end{tabularx}\vspace{-7pt}
+}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[label={$\bullet$}]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADER----------
+\begin{center}
+  \textbf{\Huge \scshape Sofija Dimitrijevic} \\ \vspace{2pt}
+  \small (650) 215-8712 $|$
+  \href{mailto:sofijadimitrijevic@ucsb.com}{\underline{sofijadimitrijevic@ucsb.com}} $|$
+  \href{https://linkedin.com/in/sofijadimitrijevic}{\underline{linkedin.com/in/sofijadimitrijevic}} \\
+  \href{https://sofidimi.netlify.app}{\underline{sofidimi.netlify.app}} $|$
+  \href{https://github.com/sofijadimitrijevic1}{\underline{github.com/sofijadimitrijevic1}}
+\end{center}
+
+%----------EDUCATION----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {University of California, Santa Barbara}{Sep. 2026 -- Jun. 2028}
+    {M.S. in Computer Science, Machine Learning Focus}{}
+  \resumeSubheading
+    {California Polytechnic State University, San Luis Obispo}{Sep. 2022 -- Jun. 2026}
+    {B.S. in Computer Science, AI/ML Concentration; Minor in Linguistics}{GPA: 3.8}
+    \resumeItemListStart
+      \resumeItem{\textbf{Magna Cum Laude}; Dean's List all 12 quarters; President's Honor List 2022--2023 and 2023--2024; Society of Women Engineers Scholarship, 2025 \& 2026.}
+      \resumeItem{\textbf{Relevant coursework:} Speech \& Language Processing, Deep Learning, Machine Learning, Artificial Intelligence, Operating Systems, Software Engineering, Database Systems, Distributed \& Parallel Computing, Theory of Computation, Computer Networks, Computer Security, Applied Regression Analysis, Data Structures \& Algorithms, Object-Oriented Programming in Java, Systems Programming.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%----------RESEARCH EXPERIENCE----------
+\section{Research Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Research Assistant, Natural Language Processing}{Aug. 2025 -- Jul. 2026}
+    {Cal Poly College of Engineering}{San Luis Obispo, CA}
+    \resumeItemListStart
+      \resumeItem{Developed machine learning methods for speaker identification in legislative testimony through the CalMatters AI4Reporters / Digital Democracy project, using a corpus of \textbf{1.54 million utterances} across five state legislative sessions.}
+      \resumeItem{\textbf{Original paper:} Coauthored \textit{Detection of Self-Introductions in Legislative Testimony} with Foaad Khosmood~\hyperlink{paper-cscsu}{[2]}. Built an automatically labeled training dataset using name-matching heuristics and engineered lexical, positional, structural, and introductory-phrase features; compared decision tree, random forest, and XGBoost classifiers, achieving \textbf{0.9704 F1} with XGBoost.}
+      \resumeItem{\textbf{Expanded manuscript:} First author of an expanded version of \textit{Detection of Self-Introductions in Legislative Testimony}, with Pallavi Das, Kasey Liu, and Foaad Khosmood~\hyperlink{paper-vegas}{[1]}. Extended the feature set with discourse context and fine-tuned BERT probability features; the hybrid XGBoost model improved F1 from \textbf{0.9747 to 0.9782} and reduced test errors from \textbf{241 to 207}.}
+      \resumeItem{Analyzed classification errors and heuristic label noise, identifying name inconsistencies and self-introductions without explicit introductory phrases as sources of evaluation and modeling challenges.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Physics Simulations Student Researcher}{Nov. 2023 -- Jun. 2025}
+    {Cal Poly Physics Department}{San Luis Obispo, CA}
+    \resumeItemListStart
+      \resumeItem{Integrated novel flocking dynamics into the Active Finite Voronoi (AFV) model to study collective cell motion in cancer progression and wound healing.}
+      \resumeItem{Vectorized critical kernels, \textbf{improving simulation runtime by 50\%}; migrated model's legacy MATLAB codebase to Python for better maintainability and HPC scalability.}
+      \resumeItem{Selected as summer research intern in 2024 for Boston research residency, collaborated with Northeastern Center for Theoretical Biophysics to improve simulation efficiency and real-world applicability.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%----------INDUSTRY EXPERIENCE----------
+\section{Industry Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Software Engineering Intern}{Jun. 2026 -- Sep. 2026}
+    {Microsoft}{Redmond, WA}
+    \resumeItemListStart
+      \resumeItem{Shipped a production \textbf{AI agent} to debug live-site incidents for Microsoft's Commercial Pricing service, diagnosing hundreds of incidents in a \textbf{median 4.8 minutes} from alert to written root cause. Authored \textbf{5 diagnostic skills} and grounded the agent in \textbf{6 live data sources}.}
+      \resumeItem{Scaled the agent into a \textbf{multi-subagent system} with autonomous incident resolution, closing dozens of incidents with \textbf{zero reactivations} and increasing 24-hour resolution of predictable failures from \textbf{20.5\% to 35.5\%}.}
+      \resumeItem{Built an automated weekly evaluation report to distinguish agent failures from gaps in skill coverage. Identified that approximately \textbf{70\% of incidents were repeats}, with authored skills handling \textbf{30\% of those repeats}, informing the team's automation priorities.}
+    \resumeItemListEnd
+  \resumeSubheading
+    {Software Engineering Intern}{Jun. 2025 -- Sep. 2025}
+    {HP Inc.}{Houston, TX}
+    \resumeItemListStart
+      \resumeItem{Designed and deployed an \textbf{AI-powered telemetry service} with a Random Forest model, \textbf{boosting prediction accuracy by 50\%} and reducing hardware validation costs.}
+    \resumeItem{Built a C\#/.NET desktop client with IPC messaging for \textbf{real-time inference at scale}, enabling deployment across thousands of devices. Created \textbf{modern UI} for application using WPF and Caliburn.}
+    \resumeItem{Automated performance benchmarking with SQLite-backed data storage, \textbf{reducing validation time by a factor of three} and improving reproducibility across teams.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%----------RESEARCH PAPERS----------
+\section{Research Papers}
+\begin{enumerate}[leftmargin=0.3in, label={[\arabic*]}, itemsep=3pt]
+  \item \hypertarget{paper-vegas}{}\small \textbf{Dimitrijevic, S.}, Das, P., Liu, K., \& Khosmood, F. (2026). \textit{Detection of self-introductions in legislative testimony}. Expanded study presented at AAIRC, Ai4 2026. \href{https://arxiv.org/abs/2608.07891}{arXiv:2608.07891 [cs.CL]}. \href{https://doi.org/10.48550/arXiv.2608.07891}{doi:10.48550/arXiv.2608.07891}.
+  \item \hypertarget{paper-cscsu}{}\small \textbf{Dimitrijevic, S.}, \& Khosmood, F. (2026). \textit{Detection of self-introductions in legislative testimony}. Original manuscript presented at the Computer Science Conference for CSU Undergraduates (CSCSU 2026). Unarchived manuscript.
+\end{enumerate}
+
+%----------PUBLICATIONS & PRESENTATIONS----------
+\section{Research Posters \& Presentations}
+\resumeSubHeadingListStart
+  \resumeItem{[Presentation] \textit{Detection of Self-Introductions in Legislative Testimony} (expanded study with BERT)~\hyperlink{paper-vegas}{[1]}. Sofija Dimitrijevic, Pallavi Das, Kasey Liu, and Foaad Khosmood. \href{https://app.swapcard.com/event/ai4-2026/planning/UGxhbm5pbmdfNDUyNjUyOA==}{Applied AI Research Conference (AAIRC), Ai4 2026}, The Venetian, Las Vegas, NV. \textit{August 3, 2026}.}
+  \resumeItem{[Presentation] \textit{Detection of Self-Introductions in Legislative Testimony} (original study)~\hyperlink{paper-cscsu}{[2]}. Sofija Dimitrijevic and Foaad Khosmood. \href{https://cscsu-conference.github.io/index26.html}{Computer Science Conference for CSU Undergraduates (CSCSU 2026)}, virtual. \textit{April 25, 2026}.}
+  \resumeItem{[Poster] \textit{Introducing Orientational Alignment to Simulate Flocking Behavior in Active Finite Voronoi Model}. Cal Poly Bailey College of Science and Mathematics 2025 Research Conference \textit{May 2025}.}
+  \resumeItem{[Poster] \textit{Visual Perception in an Agent-Based Model of Predator-Prey Relationships}. Cal Poly Bailey College of Science and Mathematics 2024 Research Conference \textit{May 2024}.}
+\resumeSubHeadingListEnd
+
+%----------PROJECTS----------
+\section{Selected Projects}
+\resumeSubHeadingListStart
+  \resumeProjectHeading{\textbf{Spotify Analyzer \& Recommender} \;|\; 
+  \emph{Python, scikit-learn, Pandas, Matplotlib}}{Mar. 2025}
+  \resumeItemListStart
+    \resumeItem{Collected and processed \textbf{7M+ streaming records} from 54 Spotify users (2012–2025) to explore music-taste patterns and build personalized recommenders.}
+    \resumeItem{Engineered multiple sparse matrices (user–song, user–artist) and implemented \textbf{user-based weighted collaborative filtering} to generate song and artist recommendations, tuning neighbor count for best results.}
+    \resumeItem{Applied \textbf{K-Means and DBSCAN} clustering to detect “niche” listening habits and identify universal artists, visualizing artist clusters and user similarity graphs (cosine and Pearson distance performed best).}
+    \resumeItem{Built a \textbf{K-Nearest-Neighbors classifier} to predict a listener’s \textbf{home region} from music preferences, highlighting geographic taste trends.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading{\textbf{Gather: Inventory Management Web App} \;|\; \emph{React, TypeScript, REST API}}{Apr. 2024 -- Jun. 2024}
+  \resumeItemListStart
+    \resumeItem{Built full-stack inventory management system with REST APIs and CRUD features in a 5-person Agile team.}
+    \resumeItem{Refactored backend into modular services, reducing code duplication by \textbf{50\%} and supporting CI testing pipelines.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading{\textbf{Moment: Burnout Prediction (Camp Poly Hacks Hackathon)} \;|\; \emph{Python, scikit-learn, Figma}}{Jan. 2024}
+  \resumeItemListStart
+    \resumeItem{Developed ML models (linear regression, decision trees) for predicting hospital staff burnout with an F1 score of 0.80; designed app UI and logo, collaborated on web app prototype.}
+    \resumeItem{Contributed in a team of 5 to deliver prototype in 24 hours; won \textbf{Best Design} award out of 13 teams. See the \href{https://tinyurl.com/camppolyhacks2024}{\underline{hackathon showcase}}.}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%---------- MENTORSHIP & OUTREACH----------
+\section{Additional Experience, Mentorship \& Outreach}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Women Involved in Software \& Hardware (WISH)}{2022 -- 2026}
+    {Vice President; Technical Director (2024--2025); Tech Officer (2023--2024)}{Cal Poly}
+    \resumeItemListStart
+      \resumeItem{Led operations for a \textbf{300+ member} community; managed a 20-person officer board.}
+      \resumeItem{Coordinated annual Grace Hopper trip logistics and pre-conference prep sessions (networking, resumes, outreach).}
+      \resumeItem{Organized 20+ annual build days and workshops (soldering, breadboarding, web dev, SQL, CTFs, etc.); on-boarded members to software/hardware fundamentals; mentored officers and workshop attendees.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {CSC 307/308, CSSE Department}{2025 -- 2026}
+    {Grader}{Cal Poly}
+    \resumeItemListStart
+      \resumeItem{Graded assignments and projects for upper-division Software Engineering courses.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {ENGL 391, English Department}{Fall 2025}
+    {Teaching Assistant}{Cal Poly}
+    \resumeItemListStart
+      \resumeItem{Held weekly office hours to support students and graded assignments for an Applied Linguistics course.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%----------AWARDS & HONORS----------
+\section{Awards \& Honors}
+\resumeItemListStart
+    \resumeItem{SWE Scholarship Recipient (2025 \& 2026).}
+    \resumeItem{Magna Cum Laude, B.S. in Computer Science (2026); Dean's List all 12 quarters; President's Honor List 2022--2023 and 2023--2024.}
+\resumeItemListEnd
+
+%----------CONFERENCES----------
+\section{Professional Conferences}
+\resumeSubHeadingListStart
+   \resumeItem{Grace Hopper Conference — Attendee (Year 4; \textit{Nov. 2025}).}
+   \resumeItem{Society of Women Engineers WE 24 — Attendee (Year 3; \textit{Oct. 2024}).}
+  \resumeItem{Harvard WECode — Attendee (Year 2; \textit{Feb. 2024}).}
+\resumeSubHeadingListEnd
+
+%----------CERTIFICATIONS & TRAINING---------- (optional)
+\section{Certifications \& Training}
+\resumeItemListStart
+  \resumeItem{Anthropic Introduction to Model Context Protocol (Aug. 2025).}
+  \resumeItem{Anthropic Advanced Model Context Protocol (Dec. 2025).}
+  \resumeItem{Codepath Advanced Interview Prep Course (Jun. - Sep. 2024).}
+\resumeItemListEnd
+
+%----------TECHNICAL SKILLS----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small \item{
+    \textbf{Languages:} Python, Java, C/C++, C\#, SQL, KQL, R, MATLAB, JavaScript, TypeScript, HTML/CSS, Racket\\
+    \textbf{AI/Agents:} LLM agents, MCP, agent evaluation, agent safety, prompt engineering, retrieval/RAG. \\
+    \textbf{Cloud/Infrastructure:} Azure (DevOps, Data Factory, EV2), Bicep/ARM, CI/CD, Docker, Linux, Git. \\
+    \textbf{Frameworks/Tools:} scikit-learn, XGBoost, NumPy, Pandas, Matplotlib, Optuna, SciPy, spaCy, NLTK, PyTorch, TensorFlow, Hugging Face, CUDA, .NET, WPF, AsyncIO, MCP, React, Node.js, Express.js, MongoDB, Git, CI/CD, Docker, Jupyter, Google Colab, Spark, SQLite, Jest, Pytest, Linux, Figma. \\
+  }
+\end{itemize}
+
+%----------ADDITIONAL----------
+\section{Additional}
+\resumeSubHeadingListStart
+  \resumeItem{Interests: Mentoring in women-in-tech communities, computational linguistics, tennis.}
+\resumeSubHeadingListEnd
+
+\end{document}
